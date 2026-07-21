@@ -1,4 +1,4 @@
-# Amazon FBA Corporate Website
+# Amazon FBA
 
 A modern and responsive corporate website template for Amazon FBA, digital services, business solutions, and professional training programs.
 
