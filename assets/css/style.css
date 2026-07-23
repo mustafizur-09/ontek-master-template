@@ -650,8 +650,14 @@ img{
 
 .contact-wrapper{
     display:grid;
-    grid-template-columns:.85fr 1.15fr;
+    grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+    align-items:start;
     gap:70px;
+}
+
+.contact-info,
+.contact-form{
+    min-width:0;
 }
 
 .contact-info > p{
@@ -689,6 +695,7 @@ img{
 }
 
 .contact-form{
+    width:100%;
     padding:38px;
     background:var(--white);
     border:1px solid var(--border);
@@ -699,11 +706,12 @@ img{
 
 .form-row{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:20px;
 }
 
 .form-group{
+    min-width:0;
     margin-bottom:20px;
 }
 
@@ -947,6 +955,11 @@ img{
         flex-direction:column;
         align-items:flex-start;
     }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
 }
 
 /* Small Mobile */
@@ -1004,4 +1017,17 @@ img{
     .footer-grid{
         gap:35px;
     }
+}
+.course-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.course-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
 }
